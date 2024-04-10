@@ -9,7 +9,7 @@ bot(
   },
   async (message, match) => {
     match = match || message.reply_message.text
-    if (!match) return await message.send('*Ejemplo : gpt What is the capital of France?*')
+    if (!match) return await message.send('*Ejemplo : gpt Cual es la capital de Francia?*')
     const res = await getGPTResponse(match)
     await message.send(res, { quoted: message.data })
   }
